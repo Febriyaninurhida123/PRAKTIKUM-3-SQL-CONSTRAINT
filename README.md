@@ -132,7 +132,9 @@ Dengan perubahan di atas, ketika Anda menghapus record dari tabel "dosen" yang m
 
 Setelah menjalankan perintah di atas, Anda dapat kembali mencoba menghapus record dengan menggunakan perintah berikut:
 
+```sql
 DELETE FROM dosen WHERE kd_ds = 'DS001';
+```
 
 
 ![image](ss/ss8.png)

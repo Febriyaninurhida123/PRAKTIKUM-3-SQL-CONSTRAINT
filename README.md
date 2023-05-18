@@ -91,9 +91,9 @@ berikut outputnya :
 
 2. Hapus satu record data pada tabel dosen yang telah dirujuk pada tabel mahasiswa.
 Menghapus data
-  ```sql
+```sql
   DELETE FROM dosen WHERE kd_ds = 'DS001';
-    ```
+```
 
 output :
 
@@ -105,17 +105,18 @@ Jika Anda ingin menghapus record dari tabel "dosen" yang memiliki referensi dari
 
 Berikut adalah perbaikan yang perlu dilakukan pada konstrain kunci asing fk_dosenwali di tabel "mahasiswa":
 
-ALTER TABLE mahasiswa DROP 
-FOREIGN KEY fk_dosenwali;
+    ``` ALTER TABLE mahasiswa DROP  
+        FOREIGN KEY fk_dosenwali;
+    ```
     
 
 
-ALTER TABLE mahasiswa
+``` ALTER TABLE mahasiswa
 ADD CONSTRAINT fk_dosenwali
 FOREIGN KEY (kd_ds)
 REFERENCES dosen (kd_ds)
 ON DELETE CASCADE;
-
+```
 
 
 Dengan perubahan di atas, ketika Anda menghapus record dari tabel "dosen" yang memiliki referensi di tabel "mahasiswa", record terkait dalam tabel "mahasiswa" juga akan secara otomatis dihapus.

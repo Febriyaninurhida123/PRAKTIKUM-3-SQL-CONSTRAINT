@@ -76,11 +76,11 @@ dengan menggunakan kode berikut :
 
 
 ```  INSERT INTO dosen (kd_ds, nama) VALUES
-    -> ('DS001', 'Abdillah'),
-    -> ('DS002', 'Bima'),
-    -> ('DS003', 'Catur'),
-    -> ('DS004', 'Deni'),
-    -> ('DS005', 'Endang');
+     ('DS001', 'Abdillah'),
+     ('DS002', 'Bima'),
+     ('DS003', 'Catur'),
+     ('DS004', 'Deni'),
+     ('DS005', 'Endang');
 ```
 
 ![image](ss/ss2.png)
@@ -105,9 +105,9 @@ Jika Anda ingin menghapus record dari tabel "dosen" yang memiliki referensi dari
 
 Berikut adalah perbaikan yang perlu dilakukan pada konstrain kunci asing fk_dosenwali di tabel "mahasiswa":
 
-    ``` ALTER TABLE mahasiswa DROP  
-        FOREIGN KEY fk_dosenwali;
-    ```
+``` ALTER TABLE mahasiswa DROP  
+    FOREIGN KEY fk_dosenwali;
+```
     
 
 
@@ -146,18 +146,19 @@ Untuk mengubah konstrain kunci asing menjadi ON UPDATE CASCADE dan ON DELETE RES
 
 Hapus konstrain kunci asing yang ada pada tabel "mahasiswa":
 
-ALTER TABLE mahasiswa
+```ALTER TABLE mahasiswa
 DROP FOREIGN KEY fk_dosenwali;
+```
 
 Tambahkan kembali konstrain kunci asing dengan opsi ON UPDATE CASCADE dan ON DELETE RESTRICT:
 
-ALTER TABLE mahasiswa
+```ALTER TABLE mahasiswa
 ADD CONSTRAINT fk_dosenwali
 FOREIGN KEY (kd_ds)
 REFERENCES dosen (kd_ds)
 ON UPDATE CASCADE
 ON DELETE RESTRICT;
-
+```
 
 ![image](ss/ss11.png)
 
@@ -166,9 +167,10 @@ ON DELETE RESTRICT;
 
 Berikut adalah contoh perintah untuk melakukan perubahan data pada tabel "dosen" dengan kolom "kd_ds":
 
-UPDATE dosen
+```UPDATE dosen
 SET kd_ds = 'DS006'
 WHERE kd_ds = 'DS001';
+```
 
 Perintah di atas akan mengubah nilai kolom "kd_ds" dari "DS001" menjadi "DS006" pada tabel "dosen". Anda dapat menyesuaikan nilai yang ingin Anda ubah dan kondisi WHERE sesuai dengan kebutuhan Anda.
 
@@ -184,8 +186,9 @@ output:
 
 Untuk menghapus data dari tabel "dosen" dengan kondisi "kd_ds = 'DS003'", Anda dapat menggunakan perintah DELETE dengan sintaks yang benar. Berikut adalah contoh perintah yang dapat Anda gunakan:
 
-DELETE FROM dosen
+```DELETE FROM dosen
 WHERE kd_ds = 'DS003';
+```
 
 output :
 
@@ -198,14 +201,16 @@ Jika Anda ingin menghapus record dari tabel "dosen" yang memiliki referensi dari
 
 6. Ubah mode menjadi ON UPDATE CASCADE ON DELETE SET NULL
 
-ALTER TABLE mahasiswa
+```ALTER TABLE mahasiswa
 DROP FOREIGN KEY fk_dosenwali;
+```
 
-ALTER TABLE mahasiswa
+```ALTER TABLE mahasiswa
 ADD CONSTRAINT fk_dosenwali
 FOREIGN KEY (kd_ds)
 REFERENCES dosen (kd_ds)
 ON DELETE SET NULL;
+```
 
 
 ![image](ss/ss16.png)
@@ -217,7 +222,8 @@ Setelah menjalankan perintah di atas, Anda dapat kembali mencoba menghapus recor
 
 7. Lakukan penghapusan data pada tabel dosen
 
-DELETE FROM dosen WHERE kd_ds = 'DS003';
+```DELETE FROM dosen WHERE kd_ds = 'DS003';
+```
 
 ![image](ss/ss17.png)
 

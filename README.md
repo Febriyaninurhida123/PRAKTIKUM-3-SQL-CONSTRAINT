@@ -75,7 +75,7 @@ Berikut ini adalah langkah-langkah dan penerapan dalam pengimplementasian CONSTR
 dengan menggunakan kode berikut :
 
 
-```  INSERT INTO dosen (kd_ds, nama) VALUES
+```INSERT INTO dosen (kd_ds, nama) VALUES
      ('DS001', 'Abdillah'),
      ('DS002', 'Bima'),
      ('DS003', 'Catur'),

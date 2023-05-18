@@ -73,6 +73,8 @@ Berikut ini adalah langkah-langkah dan penerapan dalam pengimplementasian CONSTR
 1. Lakukan penambahan data pada tabel mahasiswa dengan mengisi kd_ds yang belum ada pada data dosen.
 
 dengan menggunakan kode berikut :
+
+
 ```  INSERT INTO dosen (kd_ds, nama) VALUES
     -> ('DS001', 'Abdillah'),
     -> ('DS002', 'Bima'),

@@ -86,6 +86,8 @@ dengan menggunakan kode berikut :
 ![image](ss/ss2.png)
 
 berikut outputnya : 
+
+
 ![image](ss/ss18.png)
 
 

@@ -224,7 +224,9 @@ Setelah menjalankan perintah di atas, Anda dapat kembali mencoba menghapus recor
 
 7. Lakukan penghapusan data pada tabel dosen
 
-```DELETE FROM dosen WHERE kd_ds = 'DS003';
+``` 
+DELETE FROM dosen WHERE kd_ds = 'DS003';
+
 ```
 
 ![image](ss/ss17.png)
